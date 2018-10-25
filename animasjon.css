@@ -1,0 +1,106 @@
+/* Mal for animering i CSS:
+#id {
+    animation-name: et-navn;
+    animation-duration: 1s;
+    animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end;
+    animation-delay: 1s;
+    animation-iteration-count: nummer|infinite;
+    animation-direction: normal|reverse|alternate|alternate-reverse;
+    animation-fill-mode: none|forwards|backwards|both;
+}*/
+
+#ramme{
+  height: 300px;
+  width: 350px;
+  border: 2px solid midnightblue;
+  padding: 25px;
+  background-color: beige;
+}
+
+#boks1{
+  height: 50px;
+  width: 50px;
+  background-color: indigo;
+  position: relative; /* vil si at vi kan flytte på boksen*/
+  animation-name: frem-og-tilbake;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; /* betyr at den ikke vil stoppe */
+  animation-direction; alternate; /* for at den skal gå frem og tilbake */
+  /*timing-function har ease som standard, delay kan få den til å vente
+   med å starte, fill-mode er til det som skjer før eller etter animasjon*/
+}
+
+#boks2{
+  height: 30px;
+  width: 60px;
+  background-color: pink;
+  position: relative;
+  animation-name: diagonalt;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#boks3{
+  height: 70px;
+  width: 20px;
+  background-color: cyan;
+  position: relative;
+  animation-name: opp-og-ned;
+  animation-duration: 10s;
+  animation-iteration-count: 30;
+  animation-direction: alternate;
+}
+
+#slider{
+  height: 20px;
+  width: 20px;
+  margin-top: 130px;
+  background-color: #2F7;
+  position: relative;
+  animation-name: strekke-ut;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes frem-og-tilbake{
+  0%{ /*animasjonens start*/
+    left: 0px;
+  }
+  100%{ /* animasjonens slutt*/
+    left: 300px;
+    background-color: yellow;
+  }
+}
+
+@keyframes diagonalt{
+  0%{
+    top: 100px;
+    left: 0px;
+  }
+  100%{
+    top: 175px;
+    left: 100px;
+  }
+}
+
+@keyframes opp-og-ned{
+  0%{
+    left: 300px;
+    top: 150px;
+  }
+  100%{
+    left: 300px;
+    top: 0px;
+  }
+}
+
+@keyframes strekke-ut{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%
+  }
+}
