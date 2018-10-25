@@ -92,6 +92,7 @@ object{
   width: 500px;
   height: 400px;
   name: "boksanimasjon";
+  border: solid 2px black;
 }
 
 .container{
